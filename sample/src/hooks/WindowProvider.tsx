@@ -66,7 +66,7 @@ export const WindowProvider: React.FC<PropsWithChildren> = ({ children }) => {
         const wallet = wallets[WALLET_INFO.uuid];
         console.log('[window] connectWallet:', wallet);
 
-        const accounts = await window.ethereum.send({ method: 'eth_requestAccounts' });
+        const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
         console.log('[window] connectAccounts:', accounts);
 
         if (accounts?.[0]) {

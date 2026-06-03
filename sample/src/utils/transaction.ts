@@ -12,7 +12,7 @@ export const sendBNB = async ({ provider, sender, recipient, amount }) => {
     },
   ];
 
-  // const hash = await provider.request({ method: 'eth_sendTransaction', params });
+  //   // const hash = await provider.request({ method: 'eth_sendTransaction', params });
   const transactionHash = await provider.send('eth_sendTransaction', params);
   console.log('Transaction hash: ', transactionHash);
 };
